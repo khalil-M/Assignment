@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssignmentsViewController" customModule="Assignment" customModuleProvider="target">
             <connections>
                 <outlet property="assignmentLabel" destination="blD-nf-lzC" id="sic-2l-ijG"/>
+                <outlet property="tableView" destination="huH-Tp-soI" id="jMh-m2-jXq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,19 +21,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blD-nf-lzC">
-                    <rect key="frame" x="175.66666666666666" y="127" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="174.33333333333334" y="73" width="44.333333333333343" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.2627450980392157" green="0.20784313725490194" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="huH-Tp-soI">
+                    <rect key="frame" x="0.0" y="164" width="393" height="654"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="blD-nf-lzC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="68" id="n1h-0M-ZdU"/>
+                <constraint firstItem="huH-Tp-soI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CEf-3U-rk6"/>
+                <constraint firstItem="huH-Tp-soI" firstAttribute="top" secondItem="blD-nf-lzC" secondAttribute="bottom" constant="70" id="YVf-JM-Q0c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="huH-Tp-soI" secondAttribute="trailing" id="a5H-0o-YaH"/>
+                <constraint firstItem="blD-nf-lzC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="n1h-0M-ZdU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="huH-Tp-soI" secondAttribute="bottom" id="rXY-pn-Mt2"/>
                 <constraint firstItem="blD-nf-lzC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="swX-Zk-OzR"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <point key="canvasLocation" x="-40.458015267175568" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>

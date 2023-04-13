@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Question {
+    let id: Int
+    let title: String
+    let tags: [String]
+}

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Assignment {
+    let question: Int
+    let volunteer: String
+}

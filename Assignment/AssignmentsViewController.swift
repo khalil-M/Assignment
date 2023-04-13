@@ -10,15 +10,43 @@ import UIKit
 class AssignmentsViewController: UIViewController {
     
     var assignments: [Assignment] = []
-
+    var devloperTags: [String] = []
+    
     @IBOutlet var assignmentLabel: UILabel!
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        assignments = assignQuestionsToVolunteers(questions: [Question(id: 1, title: "my program is too slow please help", tags: ["CI/CD", "ai"]), Question(id: 3, title: "my dependency injection stack trace is strange", tags: ["java", "oop"]), Question(id: 4, title: "socket.recv is freezing", tags: ["python", "react native"])], volunteers: [Developer(name: "Khalil", tags: ["iOS", "Swift", "CI/CD"]), Developer(name: "Oussama", tags: ["java", "kotlin"]), Developer(name: "Fakri", tags: ["java", "react native"])])
-        print(assignments)
-        assignmentLabel.text = assignments.compactMap { $0.volunteer }.joined(separator: ", ")
+    @IBOutlet var tableView: UITableView!
+    
 
+    var questions = [Question(id: 1, title: "my program is too slow please help", tags: ["CI/CD", "ai"]), Question(id: 3, title: "my dependency injection stack trace is strange", tags: ["java", "oop"]), Question(id: 4, title: "socket.recv is freezing", tags: ["python", "react native"])]
+    
+    var developers = [Developer(name: "Khalil", tags: ["iOS", "Swift", "CI/CD"]), Developer(name: "Oussama", tags: ["java", "kotlin"]), Developer(name: "Fakri", tags: ["java", "react native"])]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        registerCell()
+        assignments = assignQuestionsToVolunteers(questions: questions, volunteers: developers)
+        print(assignments)
+        var tags = getTagsFrom(questions: questions)
+        assignmentLabel.text = tags.joined(separator: ", ")
+        devloperTags = getTagsFrom(developers: developers)
+        print(devloperTags)
+    }
+    
+    private func  getTagsFrom(questions: [Question]) -> [String] {
+        let tags: [String] = questions.flatMap { $0.tags }
+        return tags
+    }
+    
+    private func  getTagsFrom(developers: [Developer]) -> [String] {
+        let tags: [String] = developers.flatMap { $0.tags }
+        return tags
+    }
+    
+    
+    /// register tableViewCel
+    private func registerCell() {
+        tableView.register(UINib(nibName: "AssignmentCellTableViewCell", bundle: Bundle(for: self.classForCoder)), forCellReuseIdentifier: "AssignmentCellTableViewCell")
     }
     
 
@@ -46,6 +74,23 @@ class AssignmentsViewController: UIViewController {
         
         return assignments
     }
+}
 
-
+extension AssignmentsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        assignments.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AssignmentCellTableViewCell", for: indexPath) as? AssignmentCellTableViewCell else { return UITableViewCell()}
+        var developerTags = getTagsFrom(Developer: developers).joined(separator: " #")
+        cell.devNameLabel.text = assignments[indexPath.row].volunteer
+        
+        cell.tagsLabel.text = getTagsFrom(Developer: developers).joined(separator: " #")
+        cell.statusImage.image = UIImage(named: "GreenDot")
+        return cell
+    }
+    
+    
 }

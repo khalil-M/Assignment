@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Developer {
+    let name: String
+    let tags: [String]
+}
