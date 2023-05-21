@@ -22,6 +22,8 @@
 		82CB497F29E81F7600A97DF3 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB497E29E81F7600A97DF3 /* Assignment.swift */; };
 		82CB498329E823EC00A97DF3 /* AssignmentCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB498129E823EC00A97DF3 /* AssignmentCellTableViewCell.swift */; };
 		82CB498429E823EC00A97DF3 /* AssignmentCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CB498229E823EC00A97DF3 /* AssignmentCellTableViewCell.xib */; };
+		8414BDF32A19463800E0A7D8 /* PopupVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414BDF12A19463800E0A7D8 /* PopupVc.swift */; };
+		8414BDF42A19463800E0A7D8 /* PopupVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8414BDF22A19463800E0A7D8 /* PopupVc.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		82CB497E29E81F7600A97DF3 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		82CB498129E823EC00A97DF3 /* AssignmentCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCellTableViewCell.swift; sourceTree = "<group>"; };
 		82CB498229E823EC00A97DF3 /* AssignmentCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignmentCellTableViewCell.xib; sourceTree = "<group>"; };
+		8414BDF12A19463800E0A7D8 /* PopupVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVc.swift; sourceTree = "<group>"; };
+		8414BDF22A19463800E0A7D8 /* PopupVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupVc.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				82CB497829E81DE300A97DF3 /* AppDependencies.swift */,
 				82CB498029E81F7D00A97DF3 /* Model */,
 				82CB497429E81DAA00A97DF3 /* AssignmentsViewController.swift */,
+				8414BDF12A19463800E0A7D8 /* PopupVc.swift */,
+				8414BDF22A19463800E0A7D8 /* PopupVc.xib */,
 				82CB497529E81DAA00A97DF3 /* AssignmentsViewController.xib */,
 				82CB498529E823F300A97DF3 /* Cell */,
 				82CB494D29E8110500A97DF3 /* Assets.xcassets */,
@@ -269,6 +275,7 @@
 				82CB497729E81DAA00A97DF3 /* AssignmentsViewController.xib in Resources */,
 				82CB495129E8110500A97DF3 /* LaunchScreen.storyboard in Resources */,
 				82CB494E29E8110500A97DF3 /* Assets.xcassets in Resources */,
+				8414BDF42A19463800E0A7D8 /* PopupVc.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +306,7 @@
 				82CB497B29E81F5900A97DF3 /* Question.swift in Sources */,
 				82CB497F29E81F7600A97DF3 /* Assignment.swift in Sources */,
 				82CB497929E81DE300A97DF3 /* AppDependencies.swift in Sources */,
+				8414BDF32A19463800E0A7D8 /* PopupVc.swift in Sources */,
 				82CB494729E8110200A97DF3 /* SceneDelegate.swift in Sources */,
 				82CB497D29E81F6B00A97DF3 /* Developer.swift in Sources */,
 			);
